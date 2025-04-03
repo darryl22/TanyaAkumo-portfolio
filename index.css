@@ -39,7 +39,12 @@ a{
     position: fixed;
     top: 0;
     z-index: 10;
-    transition: 200ms;
+}
+
+.burger-bar{
+    width: 2em;
+    display: none;
+    cursor: pointer;
 }
 
 .nav-links{
@@ -48,7 +53,7 @@ a{
     gap: 2em;
 }
 
-.link-container{
+.link-container, .side-link-container{
     width: fit-content;
 }
 
@@ -66,14 +71,55 @@ a{
     transition: 200ms;
 }
 
-.link-container:hover .link-underline{
+.link-container:hover .link-underline, .side-link-container:hover .link-underline{
     transform: scaleX(1);
+}
+
+.side-nav-background{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 11;
+    transition: 200ms;
+    /* display: none; */
+    pointer-events: none;
+}
+
+.side-nav{
+    width: 40%;
+    height: 100%;
+    min-width: 250px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    padding: 2em;
+    position: relative;
+    overflow: hidden;
+    transform: translateX(-100%);
+    transition: 200ms;
+}
+
+.sidenav-close{
+    width: 1em;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.sidenav-link{
+    color: black;
+    margin-bottom: 3px;
+    display: block;
+    font-size: 1.2em;
 }
 
 .top-banner{
     width: 100%;
     height: 90vh;
-    background-image: url("./public/images/tanyaphotos/tanya-photo6.jpg");
     background-size: cover;
     background-position-y: 30%;
     background-repeat: no-repeat;
@@ -164,7 +210,7 @@ a{
     margin-top: 4em;
     padding-bottom: 4em;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 3em;
 }
 
@@ -177,7 +223,7 @@ a{
     padding: 0em 2em;
     padding-bottom: 2em;
     border-radius: 20px;
-    box-shadow: 0px 0px 20px rgb(197, 197, 197);
+    box-shadow: 0px 0px 15px rgb(197, 197, 197);
     transition: 500ms;
     cursor: pointer;
     margin-bottom: 2em;
@@ -221,6 +267,18 @@ a{
 }
 
 @media screen and (max-width: 800px) {
+    .nav-div{
+        justify-content: space-between;
+    }
+
+    .nav-links{
+        display: none;
+    }
+
+    .burger-bar{
+        display: block;
+    }
+
     .about-div{
         flex-direction: column;
     }

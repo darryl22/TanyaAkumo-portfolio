@@ -11,34 +11,60 @@
 </head>
 <body>
     <div class="nav-div" id="navDiv">
+        <img src="./public/images/menu-light.png" alt="menu" class="burger-bar" onclick="showSideNav()">
         <div class="nav-links">
             <div class="link-container">
-                <a href="" class="nav-link">Home</a>
+                <a href="/" class="nav-link">Home</a>
                 <div class="link-underline"></div>
             </div>
             <div class="link-container">
-                <a href="" class="nav-link">Publications</a>
+                <a href="./publications.html" class="nav-link">Publications</a>
                 <div class="link-underline"></div>
             </div>
             <div class="link-container">
-                <a href="" class="nav-link">Projects</a>
+                <a href="./projects.html" class="nav-link">Projects</a>
                 <div class="link-underline"></div>
             </div>
             <div class="link-container">
-                <a href="" class="nav-link">Blog</a>
+                <a href="./blog.html" class="nav-link">Blog</a>
                 <div class="link-underline"></div>
             </div>
             <div class="link-container">
-                <a href="" class="nav-link">Talks</a>
+                <a href="./talks.html" class="nav-link">Talks</a>
                 <div class="link-underline"></div>
             </div>
         </div>
     </div>
-    <div class="top-banner">
+    <div class="side-nav-background" id="sideNavBackground">
+        <div class="side-nav" id="sideNav">
+            <img src="./public/images/close.png" alt="close" class="sidenav-close" onclick="closeSideNav()">
+            <div class="side-link-container">
+                <a href="/" class="sidenav-link">Home</a>
+                <div class="link-underline"></div>
+            </div>
+            <div class="side-link-container">
+                <a href="./publications.html" class="sidenav-link">Publications</a>
+                <div class="link-underline"></div>
+            </div>
+            <div class="side-link-container">
+                <a href="./projects.html" class="sidenav-link">Projects</a>
+                <div class="link-underline"></div>
+            </div>
+            <div class="side-link-container">
+                <a href="./blog.html" class="sidenav-link">Blog</a>
+                <div class="link-underline"></div>
+            </div>
+            <div class="side-link-container">
+                <a href="./talks.html" class="sidenav-link">Talks</a>
+                <div class="link-underline"></div>
+            </div>
+        </div>
+    </div>
+    <div class="top-banner" style="background-image: url('./public/images/tanyaphotos/tanya-photo6.jpg');">
         <div class="top-banner-div">
             <p class="banner-main-text">Hello, <br>I'm Tanya Akumo</p>
             <p style="margin-top: 1em;">AI Researcher | Previously @IBM Research Africa| Data Scientist | IoT</p>
-            <button class="cv-button">Download my CV</button>
+            <a href="./public/wealth of nations adam smith.pdf" download="TanyaAkumoCV"><button class="cv-button">Download my CV</button></a>
         </div>
     </div>
     <div class="about-div">
@@ -113,5 +139,24 @@
             researchText[x].innerHTML = reducedText + "..."
         }
     }
+
+    function closeSideNav() {
+        let sideNavBackground = document.getElementById("sideNavBackground")
+        let sideNav = document.getElementById("sideNav")
+        // sideNavBackground.style.display = "none"
+        sideNavBackground.style.backgroundColor = "rgba(0, 0, 0, 0)"
+        sideNavBackground.style.pointerEvents = "none"
+        sideNav.style.transform = "translateX(-100%)"
+    }
+
+    function showSideNav() {
+        let sideNavBackground = document.getElementById("sideNavBackground")
+        let sideNav = document.getElementById("sideNav")
+        // sideNavBackground.style.display = "block"
+        sideNavBackground.style.backgroundColor = "rgba(0, 0, 0, 0.5)"
+        sideNavBackground.style.pointerEvents = "auto"
+        sideNav.style.transform = "translateX(0%)"
+    }
+
 </script>
 </html>
