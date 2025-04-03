@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="nav-div" id="navDiv">
+        <div class="nav-links">
+            <div class="link-container">
+                <a href="" class="nav-link">Home</a>
+                <div class="link-underline"></div>
+            </div>
+            <div class="link-container">
+                <a href="" class="nav-link">Publications</a>
+                <div class="link-underline"></div>
+            </div>
+            <div class="link-container">
+                <a href="" class="nav-link">Projects</a>
+                <div class="link-underline"></div>
+            </div>
+            <div class="link-container">
+                <a href="" class="nav-link">Blog</a>
+                <div class="link-underline"></div>
+            </div>
+            <div class="link-container">
+                <a href="" class="nav-link">Talks</a>
+                <div class="link-underline"></div>
+            </div>
+        </div>
+    </div>
+    <div class="top-banner">
+        <div class="top-banner-div">
+            <p class="banner-main-text">Hello, <br>I'm Tanya Akumo</p>
+            <p style="margin-top: 1em;">AI Researcher | Previously @IBM Research Africa| Data Scientist | IoT</p>
+            <button class="cv-button">Download my CV</button>
+        </div>
+    </div>
+    <div class="about-div">
+        <div class="about-info">
+            <div style="width: fit-content; margin-bottom: 2em;">
+                <p class="about-title">About Me</p>
+                <div class="about-title-underline"></div>
+            </div>
+            <p style="color: rgb(83, 83, 83); line-height: 30px;">I am a versatile engineer and data scientist with over 4+ experience, distinguished for collaborative skills and a track record of independently delivering impactful results. Specialized in data science, machine learning, and AI engineering, with accomplishments in developing data analysis platforms and machine learning solutions for different domains. I am driven to apply my expertise in AI and data science towards crafting sustainable, data-driven solutions that drive impact.</p>
+            <button class="about-cv-button">Contact Me</button>
+        </div>
+        <div class="about-image centered-image"></div>
+    </div>
+    <div class="research-interests">
+        <p class="research-interests-title">Research Interests</p>
+        <div class="research-div">
+            <div class="research-div-item">
+                <div class="research-div-image">
+                    <img src="./public/images/research.png" alt="research" style="width: 50%;">
+                </div>
+                <p style="font-size: 1.2em; margin-bottom: 1em;">Title</p>
+                <p class="research-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quisquam delectus deleniti labore praesentium enim dolores, repellat dolorum eaque recusandae vero harum aut? Eveniet iste suscipit laudantium placeat autem quaerat ratione asperiores sapiente, incidunt molestias doloremque consectetur nam voluptate hic fugit possimus aut, ipsa minima nostrum sint harum molestiae assumenda.</p>
+            </div>
+            <div class="research-div-item">
+                <div class="research-div-image">
+                    <img src="./public/images/research.png" alt="research" style="width: 50%;">
+                </div>
+                <p style="font-size: 1.2em; margin-bottom: 1em;">Title</p>
+                <p class="research-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatem dolorum ea esse accusamus hic.</p>
+            </div>
+            <div class="research-div-item">
+                <div class="research-div-image">
+                    <img src="./public/images/research.png" alt="research" style="width: 50%;">
+                </div>
+                <p style="font-size: 1.2em; margin-bottom: 1em;">Title</p>
+                <p class="research-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatem dolorum ea esse accusamus hic.</p>
+            </div>
+            <div class="research-div-item">
+                <div class="research-div-image">
+                    <img src="./public/images/research.png" alt="research" style="width: 50%;">
+                </div>
+                <p style="font-size: 1.2em; margin-bottom: 1em;">Title</p>
+                <p class="research-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatem dolorum ea esse accusamus hic.</p>
+            </div>
+            <div class="research-div-item">
+                <div class="research-div-image">
+                    <img src="./public/images/research.png" alt="research" style="width: 50%;">
+                </div>
+                <p style="font-size: 1.2em; margin-bottom: 1em;">Title</p>
+                <p class="research-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatem dolorum ea esse accusamus hic.</p>
+            </div>
+        </div>
+    </div>
+    <div class="education-div">
+        <p class="education-title">Education</p>
+        <div class="education-timeline"></div>
+    </div>
+</body>
+<script>
+    window.addEventListener("scroll", function (e) {
+        if (window.pageYOffset > 200) {
+            document.getElementById("navDiv").style.backgroundColor = "rgba(0, 0, 0, 1)"
+        } else {
+            document.getElementById("navDiv").style.backgroundColor = "rgba(0, 0, 0, 0.6)"
+        }
+    })
+
+    let researchText = document.getElementsByClassName("research-text")
+    for (let x = 0; x < researchText.length; x++) {
+        if (researchText[x].innerHTML.length > 150) {
+            let reducedText = researchText[x].innerHTML.slice(0, 150)
+            researchText[x].innerHTML = reducedText + "..."
+        }
+    }
+</script>
+</html>
